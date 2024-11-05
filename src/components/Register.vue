@@ -40,7 +40,7 @@
     },
     methods: {
       register() {
-        axios.post('http://localhost:3000/register', { username: this.username, password: this.password })
+        axios.post('https://chat-app-backend-production-970c.up.railway.app/register', { username: this.username, password: this.password })
           .then(() => {
             this.$router.push('/login');
           })
@@ -54,13 +54,12 @@
 
 <style scoped>
 .registration-form {
+  margin: 40px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
   max-width: 400px;
-  margin: auto;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;

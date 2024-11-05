@@ -63,7 +63,7 @@ export default {
         const token = localStorage.getItem('token');
         const { username } = jwtDecode(token); // Decode the token to get the username
 
-        await axios.post('http://localhost:3000/message', {
+        await axios.post('https://chat-app-backend-production-970c.up.railway.app/message', {
           username,
           message: this.message,
         });
